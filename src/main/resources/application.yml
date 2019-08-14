@@ -1,0 +1,11 @@
+# 配置文件
+spring:
+  application:
+    name: mango
+  profiles:
+    active: dev
+mybatis-plus:
+  type-handlers-package: com.mango.handler.mybatis
+logging:
+  level:
+    com.mango: DEBUG

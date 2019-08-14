@@ -1,0 +1,22 @@
+1.开发环境
+    IDE: IntelliJ IDEA 2018
+    JDK: 1.8
+
+2.代码结构
+    -doc    说明文档
+    -java   Java代码
+    --com.mango.authorize   权限相关
+    --com.mango.common      通用工具类
+    --com.mango.config      配置类
+    --com.mango.controller  基础接口
+    --com.mango.filter      过滤器&拦截器
+    --com.mango.handler     处理工具类
+    --com.mango.sys         系统相关功能
+    --com.mango.task        定时任务相关
+    -resources  资源文件及配置文件
+
+3.代码生成器
+    通过执行com.mango.MyBatisPlusGenerator生成数据库各表对应的model,dao,service,controller，可根据事实情况自行调整配置
+
+4.注意事项：
+    由于使用MyBatis生成的实体类使用lombok模式，需要按照lombok插件支持

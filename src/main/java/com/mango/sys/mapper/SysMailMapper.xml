@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mango.sys.mapper.SysMailMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mango.sys.entity.SysMail">
+        <id column="id" property="id" />
+        <result column="subject" property="subject" />
+        <result column="content" property="content" />
+        <result column="from_site" property="fromSite" />
+        <result column="to_site" property="toSite" typeHandler="com.mango.handler.mybatis.JSONArrayHandler"  />
+        <result column="cc_site" property="ccSite" typeHandler="com.mango.handler.mybatis.JSONArrayHandler" />
+        <result column="attachment" property="attachment" typeHandler="com.mango.handler.mybatis.JSONArrayHandler" />
+        <result column="inline" property="inline" typeHandler="com.mango.handler.mybatis.JSONArrayHandler" />
+        <result column="counter" property="counter" />
+        <result column="state" property="state" />
+        <result column="send_time" property="sendTime" />
+        <result column="message" property="message" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="creator_id" property="creatorId" />
+        <result column="create_time" property="createTime" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, subject, content, from_site, to_site, cc_site, attachment, inline, counter, state, message, is_deleted, creator_id, create_time, remark
+    </sql>
+
+</mapper>

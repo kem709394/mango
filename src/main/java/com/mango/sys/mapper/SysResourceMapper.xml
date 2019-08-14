@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mango.sys.mapper.SysResourceMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mango.sys.entity.SysResource">
+        <id column="id" property="id" />
+        <result column="code" property="code" />
+        <result column="name" property="name" />
+        <result column="path" property="path" />
+        <result column="method" property="method" />
+        <result column="map_class" property="mapClass" />
+        <result column="attributes" property="attributes" typeHandler="com.mango.handler.mybatis.JSONArrayHandler" />
+        <result column="note" property="note" />
+        <result column="priority" property="priority" />
+        <result column="ext_fields" property="extFields" typeHandler="com.mango.handler.mybatis.JSONObjectHandler" />
+        <result column="state" property="state" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="creator_id" property="creatorId" />
+        <result column="create_time" property="createTime" />
+        <result column="modifier_id" property="modifierId" />
+        <result column="modify_time" property="modifyTime" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, code, name, path, method, map_class, attributes, note, priority, ext_fields, state, is_deleted, creator_id, create_time, modifier_id, modify_time, remark
+    </sql>
+
+</mapper>

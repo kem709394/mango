@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mango.sys.mapper.SysTaskLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mango.sys.entity.SysTaskLog">
+        <id column="id" property="id" />
+        <result column="sys_task_id" property="sysTaskId" />
+        <result column="bean" property="bean" />
+        <result column="params" property="params" typeHandler="com.mango.handler.mybatis.JSONObjectHandler" />
+        <result column="note" property="note" />
+        <result column="is_succeed" property="isSucceed" />
+        <result column="message" property="message" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="create_time" property="createTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, sys_task_id, bean, params, note, is_succeed, message, is_deleted, create_time
+    </sql>
+
+</mapper>

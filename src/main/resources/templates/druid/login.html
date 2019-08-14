@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>正在授权</title>
+    <script type="text/javascript" th:src="@{/js/jquery-3.4.1.min.js}"></script>
+</head>
+<body>
+<script type="text/javascript">
+    $.ajax({
+        type: 'POST',
+        url: "/druid/submitLogin",
+        data: {
+            loginUsername: "[[${username}]]",
+            loginPassword: "[[${password}]]"
+        },
+        success: function(data) {
+            if("success" === data) {
+                location.href = "[[${index_url}]]";
+            } else {
+                alert("授权失败！")
+            }
+        },
+        dataType: "text"
+    });
+</script>
+</body>
+</html>

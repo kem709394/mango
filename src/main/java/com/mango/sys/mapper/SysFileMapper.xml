@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mango.sys.mapper.SysFileMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.mango.sys.entity.SysFile">
+        <id column="id" property="id" />
+        <result column="uuid" property="uuid" />
+        <result column="name" property="name" />
+        <result column="type" property="type" />
+        <result column="size" property="size" />
+        <result column="url" property="url" />
+        <result column="store" property="store" />
+        <result column="ext_fields" property="extFields" typeHandler="com.mango.handler.mybatis.JSONObjectHandler" />
+        <result column="permission" property="permission" typeHandler="com.mango.handler.mybatis.JSONObjectHandler" />
+        <result column="is_deleted" property="isDeleted" />
+        <result column="is_synced" property="isSynced" />
+        <result column="creator_id" property="creatorId" />
+        <result column="create_time" property="createTime" />
+        <result column="modifier_id" property="modifierId" />
+        <result column="modify_time" property="modifyTime" />
+        <result column="remark" property="remark" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, uuid, name, type, size, url, store, ext_fields, permission, is_deleted, is_synced, creator_id, create_time, modifier_id, modify_time, remark
+    </sql>
+
+</mapper>

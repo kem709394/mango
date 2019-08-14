@@ -1,0 +1,10 @@
+目前只适配mysql数据库
+mysql版本不能低于5.7.8
+
+1.新建数据，命名为：mango
+
+2.选择字符集：utf8mb4
+
+3.排序规则：utf8mb4_unicode_ci
+
+4.执行数据脚本：mysql.sql
