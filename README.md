@@ -82,6 +82,8 @@ mango
 - 账号密码：admin/123456
 
 ### 项目演示
+- 系统演示地址：http://kem.gitee.io/mango-admin-vue
+- 测试账号密码：admin/123456
 ![登录页面](https://images.gitee.com/uploads/images/2019/0815/170700_4055bf04_547845.jpeg "QQ浏览器截图20190815150158(1).jpg")
 ![系统首页](https://images.gitee.com/uploads/images/2019/0815/170758_732bcce6_547845.png "QQ浏览器截图20190815150316.png")
 ![用户管理](https://images.gitee.com/uploads/images/2019/0815/170858_f2d57160_547845.png "QQ浏览器截图20190815150334.png")
@@ -98,4 +100,5 @@ mango
 ![swagger](https://images.gitee.com/uploads/images/2019/0815/171456_5e29e755_547845.png "QQ浏览器截图20190815150709.png")
 
 ### 技术支持
-
+- 联系QQ:172221929
+![赞赏图片](https://images.gitee.com/uploads/images/2019/0815/174146_fb2d5301_547845.jpeg "未命名_副本.jpg")
