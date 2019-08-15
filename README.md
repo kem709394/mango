@@ -17,7 +17,7 @@
 - 引入swagger文档支持，方便编写API接口文档
 
 ### 权限设计
-![输入图片说明](https://images.gitee.com/uploads/images/2019/0815/161903_99c7228f_547845.png "QQ浏览器截图20190815161821.png")
+![权限设计图](https://images.gitee.com/uploads/images/2019/0815/161903_99c7228f_547845.png "QQ浏览器截图20190815161821.png")
 整个权限控制模块，划分为前端组件权限和数据接口权限两部分。前端组件权限，主要控制前端UI层的组件是否可见，如菜单、按钮、链接等UI组件；数据接口权限，主要控制网络请求的url访问权限，同时也支持对请求返回数据的过滤。
 
 ### 代码结构
@@ -82,7 +82,20 @@ mango
 - 账号密码：admin/123456
 
 ### 项目演示
-
+![登录页面](https://images.gitee.com/uploads/images/2019/0815/170700_4055bf04_547845.jpeg "QQ浏览器截图20190815150158(1).jpg")
+![系统首页](https://images.gitee.com/uploads/images/2019/0815/170758_732bcce6_547845.png "QQ浏览器截图20190815150316.png")
+![用户管理](https://images.gitee.com/uploads/images/2019/0815/170858_f2d57160_547845.png "QQ浏览器截图20190815150334.png")
+![角色管理](https://images.gitee.com/uploads/images/2019/0815/170932_c73243ee_547845.png "QQ浏览器截图20190815150342.png")
+![角色菜单](https://images.gitee.com/uploads/images/2019/0815/171012_b7cda093_547845.png "QQ浏览器截图20190815150450.png")
+![角色资源](https://images.gitee.com/uploads/images/2019/0815/171035_0c73972b_547845.png "QQ浏览器截图20190815150505.png")
+![参数设置](https://images.gitee.com/uploads/images/2019/0815/171107_42935684_547845.png "QQ浏览器截图20190815150517.png")
+![字典管理](https://images.gitee.com/uploads/images/2019/0815/171145_20767632_547845.png "QQ浏览器截图20190815150528.png")
+![菜单管理](https://images.gitee.com/uploads/images/2019/0815/171220_ef9150a1_547845.png "QQ浏览器截图20190815150538.png")
+![资源管理](https://images.gitee.com/uploads/images/2019/0815/171242_b609a2a9_547845.png "QQ浏览器截图20190815150546.png")
+![定时任务](https://images.gitee.com/uploads/images/2019/0815/171319_7890ccab_547845.png "QQ浏览器截图20190815150553.png")
+![文件管理](https://images.gitee.com/uploads/images/2019/0815/171403_14e6b631_547845.png "QQ浏览器截图20190815150637.png")
+![druid](https://images.gitee.com/uploads/images/2019/0815/171422_d1e4f5be_547845.png "QQ浏览器截图20190815150703.png")
+![swagger](https://images.gitee.com/uploads/images/2019/0815/171456_5e29e755_547845.png "QQ浏览器截图20190815150709.png")
 
 ### 技术支持
 
