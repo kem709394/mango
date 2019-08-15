@@ -53,18 +53,18 @@ public class ResponseResultHandler implements ResponseBodyAdvice<Object> {
                             JSONObject filterJson = (JSONObject) filterObj;
                             if (filterJson.containsKey("fields")) {
                                 JSONArray filterFields = filterJson.getJSONArray("fields");
-                                if (filterFields.size() > 0) {
-                                    if (jsonObject.containsKey("info")) {
-                                        JSONObject info = jsonObject.getJSONObject("info");
-                                        for (int i = 0; i < filterFields.size(); i++) {
-                                            info.remove(filterFields.getString(i));
-                                        }
-                                    } else if (jsonObject.containsKey("list")) {
-                                        JSONArray list = jsonObject.getJSONArray("list");
-                                        for (int i = 0; i < list.size(); i++) {
-                                            for (int j = 0; j < filterFields.size(); j++) {
-                                                list.getJSONObject(i).remove(filterFields.getString(j));
-                                            }
+                                if (jsonObject.containsKey("info")) {
+                                    JSONObject info = jsonObject.getJSONObject("info");
+                                    info.remove("isDeleted");
+                                    for (int i = 0; i < filterFields.size(); i++) {
+                                        info.remove(filterFields.getString(i));
+                                    }
+                                } else if (jsonObject.containsKey("list")) {
+                                    JSONArray list = jsonObject.getJSONArray("list");
+                                    for (int i = 0; i < list.size(); i++) {
+                                        list.getJSONObject(i).remove("isDeleted");
+                                        for (int j = 0; j < filterFields.size(); j++) {
+                                            list.getJSONObject(i).remove(filterFields.getString(j));
                                         }
                                     }
                                 }

@@ -15,6 +15,7 @@ import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
+import org.apache.ibatis.reflection.property.PropertyNamer;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,6 +23,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.websocket.server.PathParam;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 import java.nio.charset.StandardCharsets;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -234,10 +236,20 @@ public class SysResourceController extends BaseController {
             JSONArray attributes = temp.getAttributes();
             if(StringUtils.isNotBlank(temp.getMapClass())){
                 Class type=Class.forName(temp.getMapClass());
-                for(Field field:type.getDeclaredFields()){
-                    String name=field.getName();
-                    if(!name.equals("serialVersionUID")&&!attributes.contains(field.getName())){
-                        attributes.add(field.getName());
+                Field[] fields = type.getDeclaredFields();
+                Method[] methods = type.getMethods();
+                for(Field field:fields){
+                    String fieldName=field.getName();
+                    for(Method method:methods){
+                        String methodName=method.getName();
+                        if(PropertyNamer.isProperty(methodName)){
+                            if(PropertyNamer.methodToProperty(methodName).equals(fieldName)){
+                                if(!fieldName.equals("isDeleted")&&!attributes.contains(fieldName)){
+                                    attributes.add(fieldName);
+                                }
+                                break;
+                            }
+                        }
                     }
                 }
             }
